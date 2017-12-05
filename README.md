@@ -1,8 +1,12 @@
-php-resque: PHP Resque Worker (and Enqueue) [![Build Status](https://secure.travis-ci.org/chrisboulton/php-resque.png)](http://travis-ci.org/chrisboulton/php-resque)
+php-resque: PHP Resque Worker (and Enqueue)
 ===========================================
 
 Resque is a Redis-backed library for creating background jobs, placing
 those jobs on one or more queues, and processing them later.
+
+## Please note
+
+This is a fork with some minor adjustments that I needed to apply for another project. 
 
 ## Background ##
 
@@ -49,22 +53,22 @@ required, but makes life a lot easier.
 
 If you're not familiar with Composer, please see <http://getcomposer.org/>.
 
-1. Add php-resque to your application's composer.json.
+1. Add php-resque to your application's `composer.json`:
 
-```json
-{
-    "require": {
-        "chrisboulton/php-resque": "1.2.x"
-    }
-}
+```bash
+composer require david-garcia/php-resque
 ```
 
-2. Run `composer install`.
+2. Install composer dependencies:
+
+```bash
+composer install -o
+```
 
 3. If you haven't already, add the Composer autoload to your project's
    initialization file. (example)
 
-```sh
+```php
 require 'vendor/autoload.php';
 ```
 
